@@ -8,9 +8,9 @@
 body,
 html {
   height: 100%;
-  width: 100%;
   font-family: "avo";
-  font-size: 0.8125rem; }
+  font-size: 0.8125rem;
+  overflow: hidden; }
 
 p {
   color: white; }
@@ -18,7 +18,6 @@ p {
 .bg {
   background-image: url(../img/Welcome_Background.png);
   height: 100%;
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -53,9 +52,9 @@ p {
     text-align: center; }
 
 .t-border-right {
-  border-right-width: 3px;
-  border-right-style: solid;
-  border-right-color: white; }
+  border-width: 3px;
+  border-style: solid;
+  border-color: white; }
 
 .t-border-left {
   border-left-width: 3px;
@@ -64,5 +63,11 @@ p {
 
 #credit {
   margin-top: 100px; }
+
+@media screen and (min-width: 768px) {
+  #timer .t-card:not(:last-child) {
+    border-right-width: 3px;
+    border-right-style: solid;
+    border-right-color: white; } }
 
 /*# sourceMappingURL=style.css.map */

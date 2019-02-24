@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    var finishTime = new Date("11/01/2019").getTime();
+    var finishTime = new Date("03/01/2019").getTime();
     var interval = setInterval(() => {
         let now = new Date().getTime();
         let dis = finishTime - now;
@@ -20,4 +20,4 @@ $(document).ready(() => {
             console.log("clear")
         }
     },1000)
-})
+})  
