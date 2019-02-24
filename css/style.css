@@ -10,16 +10,19 @@ html {
   height: 100%;
   font-family: "avo";
   font-size: 0.8125rem;
-  overflow: scroll; }
+  overflow: scroll;
+  background-color: black; }
 
 p {
   color: white; }
 
 .bg {
-  background-image: url(../img/Welcome_Background.png);
-  height: 100%;
-  background-position: center;
+  background: url(../img/Welcome_Background.png) center center fixed;
   background-repeat: no-repeat;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover; }
   .bg .row {
     width: 100%;
