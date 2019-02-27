@@ -1,9 +1,18 @@
 $break-large: 1200px;
 $break-medium: 992px;
 $break-small: 768px;
+<<<<<<< HEAD
 @font-face {
   font-family: "avo";
   src: url(UTM_AVO.TTF);
+=======
+$col3: desaturate(#dd33aa, 40%);
+.content {
+  padding: 0;
+  @media screen and (min-width: $break-large) {
+    background-color: red($color: #000000);
+  }
+>>>>>>> develop
 }
 
 @font-face {
@@ -24,6 +33,7 @@ p {
   color: white;
 }
 
+<<<<<<< HEAD
 .bg {
   background: url(../img/Welcome_Background.png) center center fixed;
   background-repeat: no-repeat;
@@ -37,21 +47,164 @@ p {
     height: min-content;
     padding: 0px;
     margin: 0px;
+=======
+#header {
+  img {
+    max-height: 50px;
+    max-width: auto;
+  }
+  &.scrolled {
+    transition: background-color 200ms linear;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75) !important;
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75) !important;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75) !important;
+    #contactButton {
+      div {
+        color: black;
+      }
+      .hover::after {
+        background: black;
+      }
+    }
+>>>>>>> develop
   }
 }
 
+.red {
+  color: red;
+}
 #logo {
+<<<<<<< HEAD
   background-image: url(../img/LOGO-white.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   margin-top: 5%;
   height: 100px;
+=======
+  padding-bottom: 10px;
+}
+
+#contactButton {
+  img {
+    margin: 0 5px 0 5px;
+    height: 60%;
+    width: auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  div {
+    color: white;
+    padding: 20px;
+    font-size: 1.1em;
+  }
+}
+
+.hover {
+  &::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+.carousel-item {
+  object-fit: cover;
+>>>>>>> develop
 }
 
 .welcomeText {
   font-size: 3em;
+<<<<<<< HEAD
   margin-top: 40px;
+=======
+  margin-top: 30px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.titleUnderline {
+  height: 10px;
+  width: 200px;
+  background-color: red;
+  position: absolute;
+  right: 51%;
+  margin-top: -15px;
+}
+
+.what {
+  border-bottom: 5px solid red;
+}
+
+#aboutus {
+  margin-top: 30px;
+  position: absolute;
+  bottom: 70px;
+}
+
+.ted {
+  color: red;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+#aboutusContainer {
+  h2 {
+    font-weight: 800;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+}
+
+.aboutUsContext {
+  margin-top: 20px;
+}
+
+#ticketButton {
+  margin-top: 10px;
+  @media screen and (max-width: $break-small) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+footer {
+  background-color: gray;
+  padding: 20px;
+  margin-top: 20px;
+  img {
+    height: 50px;
+    float: left;
+  }
+  p {
+    line-height: 50px;
+    margin: 0 auto !important;
+  }
+  .footerItem {
+    margin: 0 auto !important;
+    width: fit-content;
+  }
+>>>>>>> develop
 }
 
 .t-card {

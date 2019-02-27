@@ -1,75 +1,240 @@
 @font-face {
   font-family: "avo";
-  src: url(UTM_AVO.TTF); }
+  src: url(UTM_AVO.TTF);
+}
 @font-face {
   font-family: "avo";
   src: url(UTM_AVOBOLD.TTF) format("truetype");
-  font-weight: bold; }
+  font-weight: bold;
+}
 body,
 html {
   height: 100%;
   font-family: "avo";
   font-size: 0.8125rem;
-  background-color: black; }
+  background-color: black;
+}
 
 p {
-  color: white; }
+  color: white;
+}
 
-.bg {
-  background: url(../img/Welcome_Background.png) center center fixed;
-  background-repeat: no-repeat;
-  height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .bg .row {
-    width: 100%;
-    height: min-content;
-    padding: 0px;
-    margin: 0px; }
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 20px;
+}
+#header img {
+  max-height: 50px;
+  max-width: auto;
+}
+#header.scrolled {
+  transition: background-color 200ms linear;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.75) !important;
+}
+#header.scrolled #contactButton div {
+  color: black;
+}
+#header.scrolled #contactButton .hover::after {
+  background: black;
+}
+
+.red {
+  color: red;
+}
 
 #logo {
-  background-image: url(../img/LOGO-white.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  margin-top: 5%;
-  height: 100px; }
+  padding-bottom: 10px;
+}
+
+#contactButton img {
+  margin: 0 5px 0 5px;
+  height: 60%;
+  width: auto;
+}
+#contactButton a {
+  text-decoration: none;
+}
+#contactButton div {
+  color: white;
+  padding: 20px;
+  font-size: 1.1em;
+}
+
+.hover::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.hover:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.carousel-item {
+  object-fit: cover;
+}
 
 .welcomeText {
   font-size: 3em;
-  margin-top: 40px; }
+  margin-top: 30px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
 
-.t-card {
-  padding-left: 30px;
-  padding-right: 30px; }
-  .t-card .p-time {
-    font-size: 6em;
-    margin-bottom: 0px;
-    font-weight: bold; }
-  .t-card .p-timetype {
-    font-size: 2.5em; }
-  .t-card p {
-    text-align: center; }
+.titleUnderline {
+  height: 10px;
+  width: 200px;
+  background-color: red;
+  position: absolute;
+  right: 51%;
+  margin-top: -15px;
+}
+
+.what {
+  border-bottom: 5px solid red;
+}
+
+#aboutus {
+  margin-top: 30px;
+  position: absolute;
+  bottom: 70px;
+}
+
+.ted {
+  color: red;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+#aboutusContainer h2 {
+  font-weight: 800;
+}
+#aboutusContainer p {
+  font-size: 1.5em;
+}
+
+.aboutUsContext {
+  margin-top: 20px;
+}
+
+#ticketButton {
+  margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  #ticketButton {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+footer {
+  background-color: gray;
+  padding: 20px;
+  margin-top: 20px;
+}
+footer img {
+  height: 50px;
+  float: left;
+}
+footer p {
+  line-height: 50px;
+  margin: 0 auto !important;
+}
+footer .footerItem {
+  margin: 0 auto !important;
+  width: fit-content;
+}
+
+#ticketInfo {
+  /* The image used */
+  background-image: url("../img/ticket_info_bac.png");
+  /* Full height */
+  height: fit-content;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 20px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+#ticketInfo img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#ticketInfo .center {
+  width: 50%;
+  height: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+#ticketInfo .button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#ticketInfo p {
+  color: white;
+  margin-bottom: 0px;
+}
+#ticketInfo #time {
+  font-size: 2em;
+  font-weight: bold;
+}
+#ticketInfo #date {
+  font-size: 3em;
+  font-weight: bolder;
+  transform: scaleY(1.4);
+}
+#ticketInfo #location {
+  font-size: 2em;
+  font-weight: bold;
+}
+.t-card .p-timetype {
+  font-size: 2.5em;
+}
+.t-card p {
+  text-align: center;
+}
 
 .t-border-right {
   border-width: 3px;
   border-style: solid;
-  border-color: white; }
+  border-color: white;
+}
 
 .t-border-left {
   border-left-width: 3px;
   border-left-style: solid;
-  border-left-color: white; }
+  border-left-color: white;
+}
 
 #credit {
-  margin-top: 100px; }
+  margin-top: 100px;
+}
 
 @media screen and (min-width: 768px) {
   #timer .t-card:not(:last-child) {
     border-right-width: 3px;
     border-right-style: solid;
-    border-right-color: white; } }
+    border-right-color: white;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
