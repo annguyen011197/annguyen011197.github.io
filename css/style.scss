@@ -1,53 +1,41 @@
 $break-large: 1200px;
 $break-medium: 992px;
 $break-small: 768px;
-<<<<<<< HEAD
-@font-face {
-  font-family: "avo";
-  src: url(UTM_AVO.TTF);
-=======
 $col3: desaturate(#dd33aa, 40%);
 .content {
   padding: 0;
   @media screen and (min-width: $break-large) {
     background-color: red($color: #000000);
   }
->>>>>>> develop
 }
 
-@font-face {
-  font-family: "avo";
-  src: url(UTM_AVOBOLD.TTF) format("truetype");
-  font-weight: bold;
+#carousel {
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+  @media screen and (max-width: $break-large) {
+    max-width: 100%;
+  }
+  img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+  }
 }
 
-body,
-html {
-  height: 100%;
-  font-family: "avo";
-  font-size: 0.8125rem;
-  background-color: black;
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
 }
 
-p {
-  color: white;
+.imgItem {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
-<<<<<<< HEAD
-.bg {
-  background: url(../img/Welcome_Background.png) center center fixed;
-  background-repeat: no-repeat;
-  height: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  .row {
-    width: 100%;
-    height: min-content;
-    padding: 0px;
-    margin: 0px;
-=======
 #header {
   img {
     max-height: 50px;
@@ -67,22 +55,19 @@ p {
         background: black;
       }
     }
->>>>>>> develop
   }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 20px;
 }
 
 .red {
   color: red;
 }
 #logo {
-<<<<<<< HEAD
-  background-image: url(../img/LOGO-white.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  margin-top: 5%;
-  height: 100px;
-=======
   padding-bottom: 10px;
 }
 
@@ -99,7 +84,14 @@ p {
     color: white;
     padding: 20px;
     font-size: 1.1em;
+    @media screen and (max-width: $break-small) {
+      visibility: hidden;
+    }
   }
+}
+
+#googleForm {
+  text-align: center;
 }
 
 .hover {
@@ -124,14 +116,10 @@ p {
 
 .carousel-item {
   object-fit: cover;
->>>>>>> develop
 }
 
-.welcomeText {
+.tilte {
   font-size: 3em;
-<<<<<<< HEAD
-  margin-top: 40px;
-=======
   margin-top: 30px;
   font-weight: bold;
   margin-left: auto;
@@ -201,54 +189,124 @@ footer {
     margin: 0 auto !important;
   }
   .footerItem {
-    margin: 0 auto !important;
     width: fit-content;
   }
->>>>>>> develop
 }
 
-.t-card {
-  .p-time {
-    font-size: 6em;
-    margin-bottom: 0px;
-    font-weight: bold;
+@media (min-width: 1200px) {
+}
+
+#ticketInfo {
+  /* The image used */
+  background-image: url("../img/ticket_info_bac.png");
+
+  /* Full height */
+  height: fit-content;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin-top: 20px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  img {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  .p-timetype {
-    font-size: 2.5em;
+  .center {
+    width: 50%;
+    height: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .button {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   p {
-    text-align: center;
+    color: white;
+    margin-bottom: 0px;
   }
-  padding-left: 30px;
-  padding-right: 30px;
+
+  #time {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  #date {
+    font-size: 3em;
+    font-weight: bolder;
+    transform: scaleY(1.4);
+  }
+
+  #location {
+    font-size: 2em;
+    font-weight: bold;
+  }
 }
 
-.t-border-right {
-  border-width: 3px;
-  border-style: solid;
-  border-color: white;
+.speaker {
+  .name {
+    font-size: 1.7em;
+    font-weight: bolder;
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+  .content {
+    margin-bottom: 0px;
+  }
 }
 
-.t-border-left {
-  border-left-width: 3px;
-  border-left-style: solid;
-  border-left-color: white;
+.speakers {
+  margin-top: 50px;
 }
 
-@mixin t-border-right {
-  border-right-width: 3px;
-  border-right-style: solid;
-  border-right-color: white;
+.cover-container {
+  height: 600px;
+  width: 100%;
+  margin-top: 50px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  img {
+    height: 600px;
+    width: auto;
+  }
+}
+.partner-container {
+  background-color: black;
+  .tilte {
+    color: white !important;
+  }
+  img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .container {
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
-#credit {
-  margin-top: 100px;
+#note {
+  color: gray;
+  margin-top: 50px;
+  font-style: italic;
 }
 
-#timer {
-  @media screen and (min-width: $break-small) {
-    .t-card:not(:last-child) {
-      @include t-border-right();
-    }
+.contact-container {
+  div {
+    margin-top: 10px;
+  }
+  .form-control {
+    background-color: #edeced;
+  }
+  .btn-primary {
+    background-color: #0b0b0b;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
   }
 }
