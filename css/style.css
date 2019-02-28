@@ -64,6 +64,12 @@
   color: white;
   padding: 20px;
   font-size: 1.1em; }
+  @media screen and (max-width: 768px) {
+    #contactButton div {
+      visibility: hidden; } }
+
+#googleForm {
+  text-align: center; }
 
 .hover::after {
   background: none repeat scroll 0 0 transparent;
@@ -138,7 +144,6 @@ footer {
     line-height: 50px;
     margin: 0 auto !important; }
   footer .footerItem {
-    margin: 0 auto !important;
     width: fit-content; }
 
 #ticketInfo {

@@ -84,7 +84,14 @@ $col3: desaturate(#dd33aa, 40%);
     color: white;
     padding: 20px;
     font-size: 1.1em;
+    @media screen and (max-width: $break-small) {
+      visibility: hidden;
+    }
   }
+}
+
+#googleForm {
+  text-align: center;
 }
 
 .hover {
@@ -182,7 +189,6 @@ footer {
     margin: 0 auto !important;
   }
   .footerItem {
-    margin: 0 auto !important;
     width: fit-content;
   }
 }
